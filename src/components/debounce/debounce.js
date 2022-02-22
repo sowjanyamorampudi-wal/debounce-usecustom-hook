@@ -5,12 +5,12 @@ const Debounce = () => {
   const [debounceValue, setDebounceValue] = useState("");
   //   const [secValue, setSecValue] = useState("");
   //   const [secDebounceValue, setSecDebounceValue] = useState("");
-  const debounce = useDebounce();
+  const debounce = useDebounce(1000);
 
   const changeHandler = (e) => {
     const text = e.target.value;
     setValue(text);
-    debounce(() => setDebounceValue(text), 1000);
+    debounce(() => setDebounceValue(text));
   };
   //   const changeHandlerSec = (e) => {
   //     const secText = e.target.value;
